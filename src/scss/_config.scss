@@ -1,0 +1,36 @@
+@mixin flexContent($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin marginDefault {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@mixin marginMobile {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@mixin media-md {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+}

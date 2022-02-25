@@ -1,0 +1,53 @@
+@import "config", "variables";
+
+header {
+  height: 80px;
+  @include flexContent(column);
+  background: url("../assets/nn.png");
+  background-color: rgba(233, 130, 55, 0.9);
+}
+
+.nav {
+  height: 60px;
+  @include marginMobile;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-image-container {
+    height: 48px;
+  }
+
+  &-image-container img {
+    height: 100%;
+  }
+
+  &-link {
+    display: none;
+  }
+}
+
+@include media-lg {
+  .nav {
+    @include marginDefault;
+
+    &-link {
+      list-style-type: none;
+      display: flex;
+      z-index: 3;
+    }
+
+    &-link li:nth-child(2) {
+      margin-left: 72px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+
+      &.router-link-exact-active {
+        font-weight: bold;
+      }
+    }
+  }
+}

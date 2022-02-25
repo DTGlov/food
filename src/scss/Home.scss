@@ -1,0 +1,79 @@
+@import "variables", "config";
+
+@function weight($weight-name) {
+  @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  background: url("../assets/nn.png");
+  background-color: rgba(233, 130, 55, 0.9);
+  // position: relative;
+  overflow: hidden;
+
+  &-container {
+    @include marginDefault;
+    display: flex;
+  }
+
+  &-text-con {
+    width: 50%;
+
+    &-heading {
+      width: 472px;
+      margin-top: 104px;
+    }
+
+    &-heading h1 {
+      font-weight: weight(bold);
+      font-size: 48px;
+    }
+    &-heading button {
+      display: block;
+      width: 244px;
+      font-family: inherit;
+      border-radius: 8px;
+      height: 72px;
+      border: none;
+      background-color: $text-color;
+      color: white;
+      font-size: 24px;
+      margin-top: 32px;
+    }
+  }
+
+  &-image-con {
+    width: 50%;
+    // position: relative;
+    // background-color: red;
+  }
+
+  @include keyframes(spin) {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &-image-con img {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    animation-name: spin;
+    animation-duration: 50000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .bar {
+    width: 392px;
+    height: 151px;
+    background-color: $text-color;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    right: 0px;
+  }
+}

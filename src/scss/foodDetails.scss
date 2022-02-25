@@ -1,0 +1,180 @@
+@import "config", "variables";
+
+.all {
+  background: #e5e5e5;
+}
+
+.food-container {
+  //   background-color: red;
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  position: absolute;
+  top: 120px;
+  left: 220px;
+
+  .food-image {
+    width: 260px;
+    height: 229px;
+    box-shadow: 0px 32px 48px -16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  .food-image img {
+    width: 100%;
+    border-radius: 8px;
+    height: 231px;
+  }
+
+  .food-details {
+    width: 80%;
+    // background-color: blue;
+    margin-top: 30px;
+    margin-left: 5%;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    &-card {
+      display: flex;
+      margin-top: 24px;
+      z-index: 2;
+
+      .marg {
+        margin-left: 10px;
+      }
+
+      &-item {
+        width: 30.3%;
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 68px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .food-para {
+          margin-top: 11px;
+          font-family: IBM Plex Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: -0.02em;
+          color: #000000;
+        }
+
+        .img-text {
+          display: flex;
+          margin-top: 10px;
+
+          p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #954f1d;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ingredients {
+  width: 48%;
+  margin: 80px auto 0;
+  box-shadow: 0px 24px 64px -16px rgba(0, 0, 0, 0.1),
+    inset 0px 4px 2px rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.6);
+  min-height: 229px;
+  border-radius: 10px;
+  padding: 30px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.pill-container {
+  display: flex;
+  // background-color: red;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  &-item {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    margin-right: 20px;
+    border-radius: 20px;
+    height: 38px;
+    margin-bottom: 10px;
+    color: #909090;
+    transition: all 0.5s ease;
+    // align-items: center;
+
+    &:hover {
+      background-color: #ff9f59;
+      color: black;
+      box-shadow: 0px 24px 64px -16px rgba(0, 0, 0, 0.1);
+      // inset 0px 4px 2px rgba(255, 255, 255, 0.65);
+
+      border: 1px solid #ff9f59;
+
+      & p:nth-child(1) {
+        color: black;
+      }
+
+      div {
+        background-color: white;
+
+        p {
+          color: #ff9f59 !important;
+        }
+      }
+    }
+
+    & p:nth-child(1) {
+      margin-top: -2px;
+    }
+
+    div {
+      background-color: #aaaaaa;
+      margin-left: 10px;
+      // width: 40%;
+      // padding: 5px;
+      // height: 50px;
+      padding: 10px;
+      // position: relative;
+      border-radius: 10px;
+      margin-top: -2px;
+
+      p {
+        // width: ;
+        position: relative;
+        top: -9px;
+        color: white;
+      }
+    }
+  }
+}
+.instructions {
+  width: 48%;
+  margin: 40px auto 0;
+  padding-bottom: 50px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+}
